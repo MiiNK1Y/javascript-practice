@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="app.js"></script>
+		<style type="text/css" rel="stylesheet">
+			
+			html, body {
+				background-color: #0d0c1d;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				margin: 0;
+			}
+
+			#application-window {
+				width: auto;
+				height: auto;
+				padding: 20px;
+				border-radius: 1em;
+				background-color: #a69cac;
+				text-align: center;
+			}
+
+			#logo {
+				height: 200px;
+			}
+
+			.pc-pick-window, .user-pick-window {
+				width: 500px;
+				height: 70px;
+				margin: 1em 0 0 0;
+				border: 3px solid black;
+				border-radius: 0.8em;
+				background-color: inherit;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: Arial;
+				font-style: italic;
+				font-size: xx-large;
+				letter-spacing: 3px;
+				color: rgba(150, 150, 150, 0.4);
+				text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+			}
+
+			.button-row {
+				width: auto;
+				height: auto;
+				margin: 1em 0 0 0;
+				boarder: 0;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+
+			#rock-button, #paper-button, #scissors-button {
+				background-color: #474973;
+				height: 70px;
+				width: 150px;
+				margin: 0;
+				border-radius: 1em;
+				border: 3px solid black;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: Arial;
+				font-size: x-large;
+			}
+
+			#paper-button {
+				margin: 0 auto 0 auto;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="application-window">
+
+			<img src="img/logo.png" id="logo">
+
+			<div class="pc-pick-window">PC pick will show here</div>
+
+			<div class="user-pick-window">your pick will show here</div>
+
+			<div class="button-row">
+				<div id="rock-button">rock</div>
+				<div id="paper-button">paper</div>
+				<div id="scissors-button">scissors</div>
+			</div>
+		</div>
+	</body>
+</html>
