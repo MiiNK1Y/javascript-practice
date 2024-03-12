@@ -10,6 +10,7 @@
 				align-items: center;
 				justify-content: center;
 				height: 100vh;
+				width: 100%;
 				margin: 0;
 			}
 
@@ -48,7 +49,6 @@
 				width: auto;
 				height: auto;
 				margin: 1em 0 0 0;
-				boarder: 0;
 				display: flex;
 				flex-direction: row;
 				align-items: center;
@@ -58,19 +58,34 @@
 				background-color: #474973;
 				height: 70px;
 				width: 150px;
-				margin: 0;
-				border-radius: 1em;
-				border: 3px solid black;
+				margin: 4px 0 4px 0;
+				border-radius: 22px 22px 22px 22px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				font-family: Arial;
 				font-size: x-large;
+				cursor: pointer;
+				user-select: none;
+                box-shadow: 0 4px 0 -1px #2a2b45;
 			}
+
+			#rock-button:active, #paper-button:active, #scissors-button:active {
+                border-radius: 22px 22px 22px 22px;
+                cursor: grabbing;
+                background-color: red;
+                margin: 8px 0 0 0;
+                box-shadow: 0 0 0 0 #2a2b45;
+            }
 
 			#paper-button {
 				margin: 0 auto 0 auto;
 			}
+
+            #paper-button:active {
+				margin: 8px auto 0 auto;
+            }
+
 
 		</style>
 	</head>
