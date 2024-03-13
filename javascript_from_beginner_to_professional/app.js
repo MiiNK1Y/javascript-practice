@@ -207,3 +207,137 @@
 
 // people.friends.push(friend1, friend2, friend3);
 // console.log(people);
+
+
+// // Exercise 3.4
+// let myCar = {
+//     make: "porcshe",
+//     model: "911",
+//     distanceTraveled: 290.000,
+//     color: "black",
+//     forSale: false
+// }
+// let color = "red";
+// myCar["color"] = color;
+// console.log(myCar.color)
+// myCar["forSale"] = true;
+// console.log(myCar.make);
+// console.log(myCar.forSale);
+
+
+// Exercise 3.3
+// let arr = [1, 2, 3];
+// let multiArr = [arr, arr, arr];
+// console.log(multiArr[1][1]);
+
+// Exercise 3.2
+// let arr = [];
+// arr.push("Milk", "Bread", "Apples");
+// console.log(`List 0 = ${arr}`);
+// arr.splice(1, 1, "Bananas", "Eggs");
+// console.log(`List 1 = ${arr}`);
+
+// let lastElement = arr.pop();
+// console.log(lastElement);
+
+// let sortedList = arr.sort();
+// console.log(sortedList);
+
+// console.log(arr.indexOf("Milk"));
+
+// arr.splice(1, 0, "Carrots", "Lettuce");
+// console.log(arr);
+
+// let newArr = ["Juice", "Pop"];
+// let combinedArr = arr.concat(newArr, newArr)
+// console.log(combinedArr)
+
+// console.log(`Last index value = ${combinedArr.lastIndexOf("Pop")}`)
+
+
+// let arr = ["Milk", "Bread", "apples"];
+// console.log(arr.length);
+// arr[1] = "Bananas";
+// console.log(arr)
+
+// console.log(true || false)
+
+// let first = 5;
+// let second = 10;
+// first++;
+// second--;
+// let total = ++first + second;
+// console.log(total)
+
+// let total2 = 500 + 100 / 5 + total--;
+// console.log(total2)
+
+// let b = 3 + 4 * 2 / 8;
+// console.log(b);
+
+// let a = "hello";
+// a = prompt("world");
+// console.log(a);
+
+
+// let a = "hello";
+// a = "world";
+// let b = `${a}`
+// console.log(a);
+
+// let height = 1.73;
+// let kilos = 70;
+// let BMI = kilos / (height ** 2);
+
+// console.log(`BMI is ${BMI}`)
+
+// let a = 421;
+// let b = 765;
+// let c = 8;
+
+// a += b; 
+
+// a /= c;
+
+// c = (b % c);
+
+// console.log(a);
+// console.log(b);
+//console.log(c);
+// let num1 = prompt("insert lenght of adjacent: ");
+// let num2 = prompt("insert lenght of opposite: ");
+// let hypo = (num1 ** 2) + (num2 ** 2)
+// let ans = Math.sqrt(hypo)
+
+// console.log(`hypotenus = ${ans}`);
+
+// let hypo1 = Math.sqrt(hypo)
+
+// let age = 23;
+// let myName = "Aleksander";
+// let iCanCodeJavaScript = true;
+
+// console.log(`Hellp, my name is ${myName}, i am ${age} years old and i can code Javascript: ${iCanCodeJavaScript}`)
+
+// let variable1 = Symbol("string");
+// let variable2 = Symbol("string2");
+
+// console.log(variable1)
+// console.log(variable2)
+
+// let num = 10;
+// let text = `Your number is ${num}`
+// console.log(text)
+
+// const b = prompt("Hi, how are you?");
+
+// let math = Math.floor(Math.random() * 100);
+// console.log(math);
+
+// let a = 10; // value 10 set
+// console.log(b); // printing value 'a' to console
+
+/*
+This file was made with the intention of learn JS.
+....
+WIP.......
