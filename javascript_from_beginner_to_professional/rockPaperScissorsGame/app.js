@@ -9,3 +9,5 @@ function createPCPick(){
 
 	return String(options[pcPickOption]);
 }
+
+console.log(createPCPick())
