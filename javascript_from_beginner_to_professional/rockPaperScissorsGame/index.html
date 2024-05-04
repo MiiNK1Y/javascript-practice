@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script type="text/javascript" src="app.js"></script>
+		<script src="app.js"></script>
 		<style type="text/css" rel="stylesheet">
 			
 			html, body {
@@ -29,7 +29,7 @@
                 user-select: none;
 			}
 
-			.pc-pick-window, .user-pick-window {
+			#pc-pick-window, #user-pick-window {
 				width: 500px;
 				height: 70px;
 				margin: 1em 0 0 0;
@@ -99,14 +99,14 @@
 
 			<img src="img/logo.png" id="logo">
 
-			<div class="pc-pick-window">PC pick will show here</div>
+			<div id="pc-pick-window">PC pick will show here</div>
 
-			<div class="user-pick-window">your pick will show here</div>
+			<div id="user-pick-window">your pick will show here</div>
 
 			<div class="button-row">
-				<button id="rock-button">rock</button>
-				<button id="paper-button">paper</button>
-				<button id="scissors-button">scissors</button>
+				<button id="rock-button" onclick="clientPick('rock')">rock</button>
+				<button id="paper-button" onclick="clientPick('paper')">paper</button>
+				<button id="scissors-button" onclick="clientPick('scissors')">scissors</button>
 			</div>
 		</div>
 	</body>

@@ -10,4 +10,6 @@ function createPCPick(){
 	return String(options[pcPickOption]);
 }
 
-console.log(createPCPick())
+function clientPick(pick){
+	document.getElementById("user-pick-window").innerHTML = pick;
+}
