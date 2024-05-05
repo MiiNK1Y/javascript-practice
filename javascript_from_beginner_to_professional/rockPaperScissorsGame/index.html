@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script src="app.js"></script>
-		<link type="text/css" rel="stylesheet" href="style.css"></style>
-	</head>
+    <head>
+        <script src="app.js"></script>
+        <link type="text/css" rel="stylesheet" href="style.css" />
+    </head>
 
-	<body>
-		<div id="application-window">
-			<img src="img/logo.png" id="logo">
-			<div id="pc-pick-window">PC pick will show here</div>
-			<div id="user-pick-window">your pick will show here</div>
+    <body>
+        <div id="application-window">
+            <img src="img/logo.png" id="logo" />
+            <div id="pc-pick-window">PC pick will show here</div>
+            <div id="user-pick-window">your pick will show here</div>
 
-			<div class="button-row">
-				<button id="rock-button" onclick="clientPick('rock')">rock</button>
-				<button id="paper-button" onclick="clientPick('paper')">paper</button>
-				<button id="scissors-button" onclick="clientPick('scissors')">scissors</button>
-			</div>
-		</div>
-	</body>
+            <div class="button-row">
+                <button id="rock-button" onclick="clientPick('rock')">
+                    rock
+                </button>
+                <button id="paper-button" onclick="clientPick('paper')">
+                    paper
+                </button>
+                <button id="scissors-button" onclick="clientPick('scissors')">
+                    scissors
+                </button>
+            </div>
+        </div>
+    </body>
 </html>
