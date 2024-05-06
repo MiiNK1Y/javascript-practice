@@ -7,9 +7,25 @@ function createPCPick() {
     return String(options[pcPickOption]);
 }
 
-function rollGame() {}
+
+
+function rollGame(userPick) {
+    pcPick = createPCPick();
+    document.getElementById("pc-pick-window").innerHTML = pcPick;
+    switch (userPick) {
+        case (userPick == pcPick):
+            console.log("same pick, roll again");
+            break;
+        case (userPick == "scissors") && (pcPick == "rock"):
+            console.log("PC chose rock, and wins!");
+            break;
+        default:
+            console.log("undecided");
+            break;
+    }
+}
 
 function clientPick(pick) {
     document.getElementById("user-pick-window").innerHTML = pick;
-    rollGame();
+    rollGame(pick);
 }
