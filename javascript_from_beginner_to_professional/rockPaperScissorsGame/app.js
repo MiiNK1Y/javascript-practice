@@ -2,7 +2,7 @@ const green = "#40a02b";
 const red = "#e64553";
 const defaultColor = "";
 
-roundsPlayed = 0;
+roundsPlayed = 67;
 
 function game(RPS) {
     function createPick() {
@@ -46,13 +46,20 @@ function game(RPS) {
         document.getElementById("pc-pick-window").style.fontStyle = "normal";
     }
 
+    document.getElementById("round-counter").style.fontSize = "";
     document.getElementById("pc-pick-window").style.backgroundColor = "";
     document.getElementById("user-pick-window").style.backgroundColor = "";
     document.getElementById("pc-pick-window").style.color = "";
     document.getElementById("user-pick-window").style.color = "";
     document.getElementById("user-pick-window").innerHTML = RPS;
-    roundsPlayed++;
-    document.getElementById("round-counter").innerHTML = roundsPlayed
+    ++roundsPlayed;
+    if (roundsPlayed == 69) {
+        document.getElementById("round-counter").style.verticalAlign = "bottom";
+        document.getElementById("round-counter").style.fontSize = "20px";
+        document.getElementById("round-counter").innerHTML = "nice";
+    } else {
+        document.getElementById("round-counter").innerHTML = roundsPlayed;
+    }
     rollGame(RPS);
 }
 
