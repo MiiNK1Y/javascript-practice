@@ -33,14 +33,11 @@ function game(RPS) {
         document.getElementById("pc-pick-window").innerHTML = pcPick;
         userWin = drawWinner(userPick, pcPick);
         if (userWin) {
-            console.log("user wins");
             document.getElementById("user-pick-window").style.backgroundColor = green;
             document.getElementById("user-pick-window").style.color = "black";
             document.getElementById("pc-pick-window").style.backgroundColor = red;
         } else if (userWin == null) {
-            console.log("draw");
         } else {
-            console.log("pc wins");
             document.getElementById("pc-pick-window").style.backgroundColor = green;
             document.getElementById("pc-pick-window").style.color = "black";
             document.getElementById("user-pick-window").style.backgroundColor = red;

@@ -16,6 +16,7 @@ body {
     border-radius: 1em;
     background-color: #a69cac;
     text-align: center;
+    box-shadow: inset 0 0 10px 3px rgba(0, 0, 0, 0.8);
 }
 
 #round-counter {
@@ -23,7 +24,7 @@ body {
     height: 60px;
     font-size: 50px;
     font-family: Arial;
-    float: right;
+    position: absolute;
 }
 
 #logo {
@@ -77,17 +78,19 @@ body {
     font-size: x-large;
     cursor: pointer;
     user-select: none;
-    box-shadow: 0 4px 0 -1px #2a2b45;
+    box-shadow: 0 4px 0 -1px #2a2b45,
+    inset 0 0 6px 3px #0000008e;
 }
 
 #rock-button:active,
 #paper-button:active,
 #scissors-button:active {
+    border: 3px solid black;
     border-radius: 22px 22px 22px 22px;
     cursor: grabbing;
-    background-color: red;
+    background-color: #7287fd;
     margin: 8px 0 0 0;
-    box-shadow: 0 0 0 0 #2a2b45;
+    box-shadow: inset 0 0 6px 3px #0000008e;
 }
 
 #paper-button {
