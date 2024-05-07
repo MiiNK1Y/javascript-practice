@@ -1,50 +1,64 @@
-function createPcPick() {
-    const options = ["rock", "paper", "scissors"];
-    const min = 0;
-    const max = 2;
-    let pcPickOption = Math.floor(Math.random() * (max - min + 1)) + min;
+const green = "#40a02b";
+const red = "#e64553";
+const defaultColor = "";
 
-    return String(options[pcPickOption]);
-}
+roundsPlayed = 0;
 
-function userWin(userPick, pcPick) {
-    if (
-        userPick === "rock" && pcPick === "scissors" ||
-        userPick === "paper" && pcPick === "rock" ||
-        userPick === "scissors" && pcPick === "paper"
-    ) {
-        return true;
-    }
-    else if (userPick == pcPick) {
-        return null;
-    }
-    else {
-        return false;
-    }
-}
+function game(RPS) {
+    function createPick() {
+        const options = ["rock", "paper", "scissors"];
+        const min = 0;
+        const max = 2;
+        let pickOption = Math.floor(Math.random() * (max - min + 1)) + min;
 
-function rollGame(userPick) {
-    pcPick = createPcPick();
+        return String(options[pickOption]);
+    }
 
-    console.log(`pc picks: ${pcPick}`); // log
+    function drawWinner(userPick, pcPick) {
+        if (
+            (userPick === "rock" && pcPick === "scissors") ||
+            (userPick === "paper" && pcPick === "rock") ||
+            (userPick === "scissors" && pcPick === "paper")
+        ) {
+            return true;
+        } else if (userPick == pcPick) {
+            return null;
+        } else {
+            return false;
+        }
+    }
 
-    document.getElementById("pc-pick-window").innerHTML = pcPick;
-    winner = userWin(userPick, pcPick);
-    if (winner) {
-        console.log("user wins");
+    function rollGame(userPick) {
+        pcPick = createPick();
+        document.getElementById("pc-pick-window").innerHTML = pcPick;
+        userWin = drawWinner(userPick, pcPick);
+        if (userWin) {
+            console.log("user wins");
+            document.getElementById("user-pick-window").style.backgroundColor = green;
+            document.getElementById("user-pick-window").style.color = "black";
+            document.getElementById("pc-pick-window").style.backgroundColor = red;
+        } else if (userWin == null) {
+            console.log("draw");
+        } else {
+            console.log("pc wins");
+            document.getElementById("pc-pick-window").style.backgroundColor = green;
+            document.getElementById("pc-pick-window").style.color = "black";
+            document.getElementById("user-pick-window").style.backgroundColor = red;
+        }
+        document.getElementById("user-pick-window").style.fontStyle = "normal";
+        document.getElementById("pc-pick-window").style.fontStyle = "normal";
     }
-    else if (winner == null) {
-        console.log("no winner, roll again.");
-    }
-    else {
-        console.log("pc wins");
-    }
+
+    document.getElementById("pc-pick-window").style.backgroundColor = "";
+    document.getElementById("user-pick-window").style.backgroundColor = "";
+    document.getElementById("pc-pick-window").style.color = "";
+    document.getElementById("user-pick-window").style.color = "";
+    document.getElementById("user-pick-window").innerHTML = RPS;
+    roundsPlayed++;
+    document.getElementById("round-counter").innerHTML = roundsPlayed
+    rollGame(RPS);
 }
 
 function clientPick(option) {
-    document.getElementById("user-pick-window").innerHTML = option;
-
-    console.log(`user picks: ${option}`); // log
-
-    rollGame(option);
+    game(option);
 }
