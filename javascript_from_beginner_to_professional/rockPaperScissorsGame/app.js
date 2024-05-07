@@ -2,7 +2,7 @@ const green = "#40a02b";
 const red = "#e64553";
 const defaultColor = "";
 
-roundsPlayed = 67;
+roundsPlayed = 0;
 
 function game(RPS) {
     function createPick() {
