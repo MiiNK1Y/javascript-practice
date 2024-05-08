@@ -1,6 +1,5 @@
 const green = "#40a02b";
 const red = "#e64553";
-const defaultColor = "";
 
 roundsPlayed = 0;
 
@@ -36,11 +35,14 @@ function game(RPS) {
             document.getElementById("user-pick-window").style.backgroundColor = green;
             document.getElementById("user-pick-window").style.color = "black";
             document.getElementById("pc-pick-window").style.backgroundColor = red;
+            document.getElementById("decider-text").innerHTML = "You win!";
         } else if (userWin == null) {
+            document.getElementById("decider-text").innerHTML = "Draw";
         } else {
             document.getElementById("pc-pick-window").style.backgroundColor = green;
             document.getElementById("pc-pick-window").style.color = "black";
             document.getElementById("user-pick-window").style.backgroundColor = red;
+            document.getElementById("decider-text").innerHTML = "You loose!";
         }
         document.getElementById("user-pick-window").style.fontStyle = "normal";
         document.getElementById("pc-pick-window").style.fontStyle = "normal";
@@ -52,6 +54,7 @@ function game(RPS) {
     document.getElementById("pc-pick-window").style.color = "";
     document.getElementById("user-pick-window").style.color = "";
     document.getElementById("user-pick-window").innerHTML = RPS;
+    document.getElementById("decider-text").innerHTML = "";
     ++roundsPlayed;
     if (roundsPlayed == 69) {
         document.getElementById("round-counter").style.verticalAlign = "bottom";
