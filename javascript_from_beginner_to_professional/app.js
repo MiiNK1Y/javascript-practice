@@ -1,6 +1,40 @@
 
 
 
+// SELF-CHECK
+// const userNames = ["Mike", "John", "Larry"];
+// const userInput = "John";
+// let htmlOutput = "";
+// if (userNames.indexOf(userInput) > -1) {
+    // htmlOutput = "Welcome, that is a user";
+// } else {
+    // htmlOutput = "Denied, not a user";
+// }
+// console.log(htmlOutput + ": " + userInput);
+
+
+// SELF-CHECK
+// let login = false;
+// let outputHolder = "";
+// let userOkay = login ? outputHolder = "logout" : outputHolder = "login";
+// console.log(userOkay);
+
+
+// SELF-CHECK
+// const q = '1';
+// switch (q) {
+    // case '1':
+        // answer = "one";
+        // break;
+    // case 1:
+        // answer = 1;
+        // break;
+    // default:
+        // answer = "not working";
+// }
+// console.log(answer);
+
+
 // CHAPTER PROJECT
 // FRIEND CHECKER GAME
 // let name = prompt("Insert a name, check if they are your friend: ");
